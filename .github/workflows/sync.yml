@@ -17,12 +17,11 @@ jobs:
         with:
           node-version: "18"
 
-      - name: 環境変数に `credentials.json` をセット
-        run: echo "$GOOGLE_CREDENTIALS" > credentials.json
-        env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+      - name: 作業ディレクトリを確認
+        run: pwd && ls -la
 
-      - name: 必要なパッケージをインストール
+      - name: パッケージをインストール
+        working-directory: ${{ github.workspace }}
         run: npm install
 
       - name: Google スプレッドシートにデータを同期
