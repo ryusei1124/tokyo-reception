@@ -13,14 +13,10 @@ app.use(cors());
 const DATA_FILE = path.join(__dirname, "data.json");
 
 // **Google スプレッドシート API 設定**
-const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
-const CREDENTIALS_PATH = path.join(__dirname, "credentials.json");
-const CREDENTIALS = JSON.parse(fs.readFileSync(CREDENTIALS_PATH, "utf8"));
-
-
+const CREDENTIALS = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 const auth = new google.auth.GoogleAuth({
   credentials: CREDENTIALS,
-  scopes: SCOPES,
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
 const sheets = google.sheets({ version: "v4", auth });
