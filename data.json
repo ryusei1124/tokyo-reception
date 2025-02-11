@@ -1,0 +1,66 @@
+[
+  {
+    "enterTime": "15:50",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  },
+  {
+    "enterTime": "15:50",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "22",
+    "purpose": "MTG, aaaa"
+  },
+  {
+    "enterTime": "15:52",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  },
+  {
+    "enterTime": "16:53",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  },
+  {
+    "enterTime": "17:00",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  },
+  {
+    "enterTime": "17:12",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  },
+  {
+    "enterTime": "17:16",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  },
+  {
+    "enterTime": "17:49",
+    "exitTime": "",
+    "memberID": "a12345678",
+    "name": "test",
+    "nonMemberCount": "0",
+    "purpose": "MTG"
+  }
+]
