@@ -1,0 +1,29 @@
+name: Sync to Google Sheets
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # 毎時0分に実行
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリのコードを取得
+        uses: actions/checkout@v3
+
+      - name: Node.js をセットアップ
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: 環境変数に `credentials.json` をセット
+        run: echo "$GOOGLE_CREDENTIALS" > credentials.json
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+
+      - name: 必要なパッケージをインストール
+        run: npm install
+
+      - name: Google スプレッドシートにデータを同期
+        run: node server.js
